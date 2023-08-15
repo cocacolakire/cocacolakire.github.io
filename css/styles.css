@@ -1,8 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
 html {
     box-sizing: border-box;
     font-size: 16px;
 }  
 
 body {
-    font-family: monospace, arial;
+    font-family: 'Space Mono',monospace, arial !important;
+    background-image: url('../resources/images/bkgndImg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    height: 10%;
+    position: fixed;
+    top: 0;
+    background-color: rgba(29, 29, 27, 0.9);
+    color: #F2F4F3;
+    width: 100%;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-around;
+}
+
+h1{
+    padding: 0.5rem !important;
+    font-size: 2rem !important;
+}
+
+.navigationList {
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+}
+
+.navigationList li{
+    font-size: 1.2rem !important;
+}
+
+main {
+    position: relative;
+    top: 10%;
 }

@@ -3,6 +3,7 @@
 html {
     box-sizing: border-box;
     font-size: 16px;
+    height: 100%;
 }  
 
 body {
@@ -10,6 +11,7 @@ body {
     background-image: url('../resources/images/bkgndImg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    min-height: 100%;
 }
 
 header {
@@ -29,6 +31,7 @@ header {
 h1{
     padding: 0.5rem !important;
     font-size: 2rem !important;
+    color: #FFF;
 }
 
 .navigationList {
@@ -41,7 +44,58 @@ h1{
     font-size: 1.2rem !important;
 }
 
+.navigationList li:hover{
+    color: white;
+    cursor: pointer;
+}
+
 main {
-    position: relative;
-    top: 10%;
+    margin-top: 8%;
+}
+
+#aboutMe{
+    padding: 1rem;
+    width: 50%;
+    margin: 0 auto;
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.imageContainer{
+    position: absolute;
+    width: 10rem;
+    height: 10rem;
+    overflow: hidden;
+    border-radius: 50%;
+    border: rgb(29, 29, 27) 0.8rem solid;
+}
+
+#profPic{
+    height: auto;
+    max-width: 100%;
+}
+
+.infoText {
+    width: 94%;
+   display: flex;
+    justify-self: flex-end;
+    align-content: center;
+    padding: 0.5rem;
+    height: 90%;
+    color: #F2F4F3;
+    background-color: rgba(29, 29, 27, 0.9);
+    justify-content: flex-end;
+}
+
+.text_container {
+    width: 82%;
+    line-height: 1.5;
+}
+.infoText h2{
+    font-size: 1.5rem !important;
+    color: #3BC14A;
+}
+.infoText p {
+    width: fit-content;
 }

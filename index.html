@@ -7,15 +7,17 @@
     <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/reset.css">
+    <script src="./script/script.js" async></script>
+    <script src="https://kit.fontawesome.com/02c4c0423a.js" crossorigin="anonymous" async></script>
 </head>
 <body>
     <header>
         <h1>Cocacolakire</h1>
         <nav class="navigation">
             <ul class="navigationList">
-                <li>About Me</li>
-                <li>Skills</li>
-                <li>Projects</li>
+                <li><a href="#aboutMe">About Me</a></li>
+                <li><a href="#skillSection">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li>Contact</li>
             </ul>
         </nav>
@@ -37,9 +39,68 @@
             </aside>
         </div>
 
+        <div id="projects" class="carousel-container">
+            <div class="header-container">
+                <h2>Projects</h2>
+            </div>
+            <div class="carousel" id="carousel">
+                <span class="hidden">
+                    <img id="img1" src="" alt="">
+                    <div class="overlay"></div>
+                </span>
+                <span id="show">
+                    <img id="img2" src="" alt="">
+                </span>
+                <span class="hidden">
+                    <img id="img3" src="" alt="">
+                    <div class="overlay"></div>
+                </span>
+               
+            </div>
+            <div class="switch-container">
+               <!-- Left triangle button -->
+                <button type="button" class="triangle-buttons">
+                    <!-- Triangle -->
+                    <div  name="LEFT"  class="triangle-buttons__triangle triangle-buttons__triangle--l"></div>
+
+                    <!-- Content -->
+                    
+                </button>
+                <!-- Right triangle button -->
+                <h2 id="current_project">TSAL</h2>
+                <button type="button" class="triangle-buttons">
+                    <!-- Content -->
+
+                    <!-- Triangle -->
+                    <div name="RIGHT" class="triangle-buttons__triangle triangle-buttons__triangle--r"></div>
+                </button>
+            </div>
+        </div>
+
+        <div id="skillSection" class="skills">
+            <h2>Skills</h2>
+            <span class="skillsContainer">
+                <i class="fa fa-brands fa-github"></i>
+                <i class="fa fa-brands fa-html5"></i>
+                <i class="fab fa-brands fa-node"></i>
+                <i class="fab fa-brands fa-python"></i>
+                <i class="fab fa-brands fa-js"></i>
+                <i class="fab fa-brands fa-css3-alt"></i>
+                <i class="fa fa-solid fa-microchip"></i>
+            </span>
+        </div>
     </main>
     <footer>
-
+        <section class="imageLink">
+            Image by 
+            <a href="https://pixabay.com/users/gam-ol-2829280/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5907811">Oleg Gamulinskii</a> from
+            <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5907811">Pixabay</a>    
+        </section>
+        <section class="otherLink">
+            <a href="https://linkedin.com/in/erik-hasslid-4039bb265">
+            <i class="fa fa-brands fa-linkedin"></i>
+            </a>
+        </section>
     </footer>
 </body>
 </html>

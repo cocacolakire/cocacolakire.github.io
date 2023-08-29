@@ -3,13 +3,12 @@
 html {
     box-sizing: border-box;
     font-size: 16px;
-    height: 100%;
 }  
 
 body {
     font-family: 'Space Mono',monospace, arial !important;
     background-image: url('../resources/images/bkgndImg.jpg');
-    background-repeat: no-repeat;
+    background-repeat:repeat-y;
     background-size: cover;
     min-height: 100%;
 }
@@ -21,6 +20,7 @@ header {
     background-color: rgba(29, 29, 27, 0.9);
     color: #F2F4F3;
     width: 100%;
+    z-index: 2;
 }
 
 .navigation {
@@ -40,17 +40,38 @@ h1{
     justify-content: space-between;
 }
 
-.navigationList li{
+.navigationList li a{
     font-size: 1.2rem !important;
+    text-decoration: none;
+    color: #FFF;
 }
 
-.navigationList li:hover{
-    color: white;
+.navigationList li a:hover{
+    color: #2596BE;
     cursor: pointer;
 }
 
+@media screen and (max-width: 1400px) {
+    /* … */
+    .navigationList {
+        width: 60%;
+    }
+}
+
+
+@media screen and (max-width: 520px){
+   .navigationList {
+     width: 100%;
+   }
+   .navigation{
+    padding: 0.8rem;
+   }
+}
+
+
 main {
     margin-top: 8%;
+    height: auto;
 }
 
 #aboutMe{
@@ -92,10 +113,215 @@ main {
     width: 82%;
     line-height: 1.5;
 }
-.infoText h2{
+
+@media screen and (max-width: 1820px) {
+
+    #aboutMe{
+        place-items: center;
+    }
+   
+    .imageContainer {
+      position: static;
+    }
+
+    .infoText {
+        height: auto;
+        padding: 0 0.2rem 0.5rem 0.2rem;
+    }
+
+    .text_container{
+        width: auto;
+        text-align: center;
+
+    }
+}
+
+@media screen and (max-width: 1020px){
+    main {
+        margin-top: 12%;
+    }
+    #aboutMe{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 520px){
+    main {
+        margin-top: 20%;
+    }
+    #aboutMe{
+        width: 90%;
+    }
+}
+
+h2{
     font-size: 1.5rem !important;
     color: #3BC14A;
+    font-weight: bold;
 }
 .infoText p {
     width: fit-content;
 }
+
+.carousel-container{
+    background: rgb(242, 244, 243);
+    margin-top: 3rem;
+}
+
+.header-container{
+    background-color: rgb(29, 29, 27);
+    width: 100%;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+#carousel {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    overflow: hidden;
+    height: 35rem;
+    transition: 300ms;
+}
+
+.hidden{
+    position: relative;
+}
+
+.overlay {
+    background: rgba(242, 244, 243, 0.6);  /* fallback for old browsers */
+    
+    height: 100%;
+    width: 100%;
+    top: 0;
+    position: absolute;
+}
+
+#carousel span img{
+    height: auto;
+    width: 100%;
+}
+
+.switch-container{
+    display: flex;
+    width: 15%;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0.5rem 0.5rem 1rem 0.5rem;
+    align-items: center;
+}
+
+.switch-container h2 {
+    color: rgb(29, 29, 27);
+}
+
+.triangle-buttons {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    /* Spacing */
+    padding: 0.5rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 520px){
+   #carousel {
+    height: 20rem;
+    display: inline-flex;
+   }
+   #show{
+    flex: 0 0 100%;
+   }
+
+   .switch-container{
+    width: 60%;
+   }
+}
+
+.triangle-buttons__triangle--l:hover{
+    border-color: transparent rgb(155, 192, 255) transparent transparent;
+}
+
+.triangle-buttons__triangle--r:hover{
+    border-color: transparent transparent transparent rgb(155, 192, 255);
+}
+
+.triangle-buttons__triangle {
+    border-style: solid;
+
+    /* Size */
+    height: 0px;
+    width: 0px;
+}
+
+.triangle-buttons__triangle--l {
+    border-color: transparent #2596BE transparent transparent;
+    border-width: 0.9rem 0.9rem 0.9rem 0;
+}
+
+.triangle-buttons__triangle--r {
+    border-color: transparent transparent transparent #2596BE;
+    border-width: 0.9rem 0 0.9rem 0.9rem;
+}
+
+.skills {
+    background-color: rgba(29, 29, 27, 0.9);
+    width: 50%;
+    margin: 3rem auto 8rem auto;
+    padding: 1rem 0;
+    text-align: center;
+}
+.skillsContainer{
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+i {
+    color: white;
+    font-size: 3rem !important;
+}
+
+@media screen and (max-width: 520px){
+    .skills {
+        width: 80%;
+    }
+   .skillsContainer{
+    flex-wrap: wrap;
+   }
+ }
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+    
+        display: flex !important;
+        /* align-content: center; */
+        justify-content: space-between;
+        /* flex-wrap: wrap; */
+        align-items: center;
+        /* padding: 1rem; */
+        background-color: rgba(29, 29, 27, 0.95);
+}
+
+footer section{
+    padding: 1rem;
+}
+
+.imageLink {
+    color: #3BC14A;
+}
+
+.imageLink a {
+    color: #2596BE;
+}
+
+
+

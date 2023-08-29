@@ -66,7 +66,16 @@ h1{
    .navigation{
     padding: 0.8rem;
    }
+   header {
+    height: auto;
 }
+}
+
+@media screen and (max-width: 420px){
+    header {
+        height: auto;
+    }
+ }
 
 
 main {
@@ -242,6 +251,16 @@ h2{
     width: 60%;
    }
 }
+
+@media screen and (max-width: 1025px){
+    #carousel {
+     height: 20rem;
+    }
+
+    .switch-container{
+        width: 60%;
+       }
+ }
 
 .triangle-buttons__triangle--l:hover{
     border-color: transparent rgb(155, 192, 255) transparent transparent;

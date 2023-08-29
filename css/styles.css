@@ -238,7 +238,20 @@ h2{
     cursor: pointer;
 }
 
-@media screen and (max-width: 520px){
+@media screen and (max-width: 385px){
+    #carousel {
+        height: 10rem;
+        display: inline-flex;
+       }
+       #show{
+        flex: 0 0 100%;
+       }
+       .switch-container{
+        width: 70%;
+       }
+ }
+
+@media screen and (max-width: 520px) and (min-width: 385px){
    #carousel {
     height: 20rem;
     display: inline-flex;
@@ -248,15 +261,18 @@ h2{
    }
 
    .switch-container{
-    width: 60%;
+    width: 70%;
    }
 }
 
-@media screen and (max-width: 1025px){
+@media screen and (max-width: 1025px) and (min-width: 520px){
     #carousel {
      height: 20rem;
+     display: inline-flex;
     }
-
+    #show{
+        flex: 0 0 100%;
+       }
     .switch-container{
         width: 60%;
        }

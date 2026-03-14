@@ -43,23 +43,6 @@ body {
     transition: 300ms;
 }
 
-/* 1820px is not a standard Tailwind breakpoint */
-@media screen and (max-width: 1820px) {
-    #aboutMe {
-        place-items: center;
-    }
-    .imageContainer {
-        position: static;
-    }
-    .infoText {
-        height: auto;
-        padding: 0 0.2rem 0.5rem 0.2rem;
-    }
-    .text_container {
-        width: auto;
-        text-align: center;
-    }
-}
 
 /* Carousel responsive - breakpoints don't align with Tailwind defaults */
 @media screen and (max-width: 1025px) and (min-width: 520px) {

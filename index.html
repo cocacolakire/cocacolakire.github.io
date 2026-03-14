@@ -29,31 +29,28 @@
       </nav>
     </header>
 
-    <main class="mt-[20%] sm:mt-[12%] lg:mt-[8%]">
-      <div id="aboutMe" class="p-4 w-[90%] sm:w-[70%] lg:w-1/2 mx-auto grid justify-between items-center">
-        <section class="imageContainer absolute w-40 h-40 overflow-hidden rounded-full border-[0.8rem] border-[rgb(29,29,27)]">
+    <main class="pt-28 md:pt-24 lg:pt-20">
+      <div id="aboutMe" class="scroll-mt-28 md:scroll-mt-24 lg:scroll-mt-20 p-4 w-[90%] sm:w-[70%] lg:w-1/2 mx-auto flex flex-col items-center gap-4">
+        <section class="w-40 h-40 flex-shrink-0 overflow-hidden rounded-full border-[0.8rem] border-[rgb(29,29,27)]">
           <img
             id="profPic"
             src="./resources/images/profile.jpg"
             alt="Picture of me"
-            srcset=""
-            class="h-auto max-w-full"
+            class="h-full w-full object-cover"
           />
         </section>
-        <aside class="infoText w-[94%] flex justify-self-end content-center p-2 h-[90%] text-[#F2F4F3] bg-[rgba(29,29,27,0.9)] justify-end">
-          <div class="text_container w-[82%] leading-relaxed">
-            <h2 class="text-2xl text-[#3BC14A] font-bold">28 year old engineer with interest in technology</h2>
-            <p>
-              I am an civil engineer situated in Sweden, currently working as a
-              Business Intelligence engineer in Karlstad. I have a big interest
-              in technology and I love to learn new stuff. In my spare time I
-              like to play baseball, read, and take on different projects.
-            </p>
-          </div>
+        <aside class="w-full text-[#F2F4F3] bg-[rgba(29,29,27,0.9)] p-4 text-center leading-relaxed">
+          <h2 class="text-2xl text-[#3BC14A] font-bold mb-2">28 year old engineer with interest in technology</h2>
+          <p>
+            I am an civil engineer situated in Sweden, currently working as a
+            Business Intelligence engineer in Karlstad. I have a big interest
+            in technology and I love to learn new stuff. In my spare time I
+            like to play baseball, read, and take on different projects.
+          </p>
         </aside>
       </div>
 
-      <div id="projects" class="bg-[rgb(242,244,243)] mt-12">
+      <div id="projects" class="scroll-mt-28 md:scroll-mt-24 lg:scroll-mt-20 bg-[rgb(242,244,243)] mt-12">
         <div class="bg-[rgb(29,29,27)] w-full text-center py-4">
           <h2 class="text-2xl text-[#3BC14A] font-bold">Projects</h2>
         </div>
@@ -81,7 +78,7 @@
         </div>
       </div>
 
-      <div id="skillSection" class="bg-[rgba(29,29,27,0.9)] w-4/5 sm:w-1/2 mx-auto mt-12 mb-32 py-4 text-center">
+      <div id="skillSection" class="scroll-mt-28 md:scroll-mt-24 lg:scroll-mt-20 bg-[rgba(29,29,27,0.9)] w-4/5 sm:w-1/2 mx-auto mt-12 mb-32 py-4 text-center">
         <h2 class="text-2xl text-[#3BC14A] font-bold">Skills</h2>
         <span class="pt-4 flex flex-wrap justify-around">
           <i class="fa fa-brands fa-github text-white text-5xl"></i>

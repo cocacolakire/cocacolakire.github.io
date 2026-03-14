@@ -17,20 +17,12 @@
     ></script>
   </head>
   <body>
-    <header class="fixed top-0 w-full z-[2] bg-[rgba(29,29,27,0.9)] text-[#F2F4F3] pb-2">
-      <h1 class="p-2 text-3xl text-white">Cocacolakire</h1>
-      <nav class="flex justify-around">
-        <ul class="flex w-full xl:w-[60%] 2xl:w-[30%] justify-between sm:px-3">
-          <li><a href="#aboutMe" class="text-xl text-white no-underline hover:text-[#2596BE] cursor-pointer">About Me</a></li>
-          <li><a href="#skillSection" class="text-xl text-white no-underline hover:text-[#2596BE] cursor-pointer">Skills</a></li>
-          <li><a href="#projects" class="text-xl text-white no-underline hover:text-[#2596BE] cursor-pointer">Projects</a></li>
-          <li class="text-xl text-white">Contact</li>
-        </ul>
-      </nav>
+    <header class="fixed top-0 w-full z-[2] bg-[rgba(29,29,27,0.9)] text-[#F2F4F3] py-2">
+      <h1 class="px-4 text-3xl text-white font-['Space_Mono']">Cocacolakire</h1>
     </header>
 
-    <main class="pt-28 md:pt-24 lg:pt-20">
-      <div id="aboutMe" class="scroll-mt-28 md:scroll-mt-24 lg:scroll-mt-20 p-4 w-[90%] sm:w-[70%] lg:w-1/2 mx-auto flex flex-col items-center gap-4">
+    <main class="pt-16">
+      <div id="aboutMe" class="p-4 w-[90%] sm:w-[70%] lg:w-1/2 mx-auto flex flex-col items-center gap-4">
         <section class="w-40 h-40 flex-shrink-0 overflow-hidden rounded-full border-[0.8rem] border-[rgb(29,29,27)]">
           <img
             id="profPic"
@@ -50,7 +42,7 @@
         </aside>
       </div>
 
-      <div id="projects" x-data="carouselData()" class="scroll-mt-28 md:scroll-mt-24 lg:scroll-mt-20 bg-[rgb(242,244,243)] mt-12">
+      <div id="projects" x-data="carouselData()" class=" bg-[rgb(242,244,243)] mt-12">
         <div class="bg-[rgb(29,29,27)] w-full text-center py-4">
           <h2 class="text-2xl text-[#3BC14A] font-bold">Projects</h2>
         </div>
@@ -68,7 +60,7 @@
         </div>
       </div>
 
-      <div id="skillSection" class="scroll-mt-28 md:scroll-mt-24 lg:scroll-mt-20 bg-[rgba(29,29,27,0.9)] w-4/5 sm:w-1/2 mx-auto mt-12 mb-32 py-4 text-center">
+      <div id="skillSection" class=" bg-[rgba(29,29,27,0.9)] w-4/5 sm:w-1/2 mx-auto mt-12 mb-32 py-4 text-center">
         <h2 class="text-2xl text-[#3BC14A] font-bold">Skills</h2>
         <span class="pt-4 flex flex-wrap justify-around">
           <i class="fa fa-brands fa-github text-white text-5xl"></i>

@@ -1,60 +1,11 @@
-const IMG_URL = "./resources/images/";
-let imgs = [];
-let circuits = ['TSAL', 'Dummy TSAL', 'IMD-latch', 'LED card', 'Precharge', 'Starting logic'];
-
-const switchImg = (event) => {
-    let DIRECTION = event.target.getAttribute('name');
-    let buff = '';
-    switch(DIRECTION){
-        case 'LEFT':
-            buff = imgs.shift();
-            imgs.push(buff);
-            buffTwo = circuits.shift();
-            circuits.push(buffTwo)
-        break;
-        case 'RIGHT':
-            buff = imgs.pop();
-            imgs.unshift(buff);
-            buffTwo = circuits.pop();
-            circuits.unshift(buffTwo);
-        break;
-    }
-    changeImgs();
-}
-
-function setImg(elem, source){
-    console.log(source);
-    elem.src = IMG_URL + source;
-}
-
-function initImgs(){
-    for(let i = 1, j = 0; i <= 6; ++i, ++j){
-        if(imgs.length != 6){
-            imgs.push('circuit' + i + '.png');
-        }
-    }
-    changeImgs();
-}
-
-function changeImgs(){
-    for(let i = 1, j = 0; i <= 6; ++i, ++j){
-        switch(i){
-            case 3: setImg(document.getElementById('img1'), imgs[j]); break;
-            case 4: setImg(document.getElementById('img2'), imgs[j]); 
-                    document.getElementById('current_project').innerHTML = circuits[j];
-                    break;
-            case 5: setImg(document.getElementById('img3'), imgs[j]); break;
-        }
+function carouselData() {
+    return {
+        IMG_URL: './resources/images/',
+        images: ['circuit1.png', 'circuit2.png', 'circuit3.png', 'circuit4.png', 'circuit5.png', 'circuit6.png'],
+        circuits: ['TSAL', 'Dummy TSAL', 'IMD-latch', 'LED card', 'Precharge', 'Starting logic'],
+        index: 3,
+        prev() { this.index = (this.index - 1 + 6) % 6 },
+        next() { this.index = (this.index + 1) % 6 },
+        imgSrc(offset) { return this.IMG_URL + this.images[(this.index + offset + 6) % 6] },
     }
 }
-
-const initBtns = () => {
-    let btns = document.getElementsByClassName('triangle-buttons');
-    
-    for(let btn of btns){
-        btn.addEventListener('click', switchImg);
-    }
-}
-
-initBtns();
-initImgs();

@@ -8,8 +8,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/reset.css" />
+    <script src="./script/script.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-    <script src="./script/script.js" async></script>
     <script
       src="https://kit.fontawesome.com/02c4c0423a.js"
       crossorigin="anonymous"
@@ -50,30 +50,30 @@
         </aside>
       </div>
 
-      <div id="projects" class="scroll-mt-28 md:scroll-mt-24 lg:scroll-mt-20 bg-[rgb(242,244,243)] mt-12">
+      <div id="projects" x-data="carouselData()" class="scroll-mt-28 md:scroll-mt-24 lg:scroll-mt-20 bg-[rgb(242,244,243)] mt-12">
         <div class="bg-[rgb(29,29,27)] w-full text-center py-4">
           <h2 class="text-2xl text-[#3BC14A] font-bold">Projects</h2>
         </div>
-        <div class="carousel" id="carousel">
+        <div id="carousel" class="carousel">
           <span class="carousel-side relative h-full overflow-hidden">
-            <img id="img1" src="" alt="" class="h-full w-full object-cover" />
+            <img :src="imgSrc(-1)" alt="" class="h-full w-full object-cover" />
             <div class="absolute bg-[rgba(242,244,243,0.6)] h-full w-full top-0"></div>
           </span>
-          <span id="show" class="h-full overflow-hidden">
-            <img id="img2" src="" alt="" class="h-full w-full object-cover" />
+          <span class="h-full overflow-hidden">
+            <img :src="imgSrc(0)" alt="" class="h-full w-full object-cover" />
           </span>
           <span class="carousel-side relative h-full overflow-hidden">
-            <img id="img3" src="" alt="" class="h-full w-full object-cover" />
+            <img :src="imgSrc(1)" alt="" class="h-full w-full object-cover" />
             <div class="absolute bg-[rgba(242,244,243,0.6)] h-full w-full top-0"></div>
           </span>
         </div>
         <div class="switch-container flex w-[70%] lg:w-[15%] justify-between mx-auto py-2 px-2 pb-4 items-center">
-          <button type="button" class="triangle-buttons flex items-center justify-center p-2 bg-transparent cursor-pointer">
-            <div name="LEFT" class="triangle-buttons__triangle triangle-buttons__triangle--l"></div>
+          <button type="button" @click="prev()" class="triangle-buttons flex items-center justify-center p-2 bg-transparent cursor-pointer">
+            <div class="triangle-buttons__triangle triangle-buttons__triangle--l"></div>
           </button>
-          <h2 id="current_project" class="text-2xl text-[rgb(29,29,27)] font-bold">TSAL</h2>
-          <button type="button" class="triangle-buttons flex items-center justify-center p-2 bg-transparent cursor-pointer">
-            <div name="RIGHT" class="triangle-buttons__triangle triangle-buttons__triangle--r"></div>
+          <h2 x-text="circuits[index]" class="text-2xl text-[rgb(29,29,27)] font-bold"></h2>
+          <button type="button" @click="next()" class="triangle-buttons flex items-center justify-center p-2 bg-transparent cursor-pointer">
+            <div class="triangle-buttons__triangle triangle-buttons__triangle--r"></div>
           </button>
         </div>
       </div>
